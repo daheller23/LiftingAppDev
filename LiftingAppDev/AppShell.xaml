@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LiftingAppDev.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LiftingAppDev"
+    Shell.FlyoutBehavior="Flyout"
+    Title="LiftingAppDev">
+
+
+    <FlyoutItem Route="home">
+        
+        <ShellContent Title="Main Page" Route="MainPageRoute" ContentTemplate="{DataTemplate local:MainPageView}"/>
+        <ShellContent Title="Test Page" Route="TestPageRoute" ContentTemplate="{DataTemplate local:TestPageView}"/>
+        
+    </FlyoutItem>
+
+
+
+
+
+
+
+</Shell>
