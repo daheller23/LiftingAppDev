@@ -10,8 +10,13 @@
 
     <FlyoutItem Route="home">
         
-        <ShellContent Title="Main Page" Route="MainPageRoute" ContentTemplate="{DataTemplate local:MainPageView}"/>
-        <ShellContent Title="Test Page" Route="TestPageRoute" ContentTemplate="{DataTemplate local:TestPageView}"/>
+        <!-- Title: Title of the tab button
+             Route: Name of the page route
+             ContentTemplate (DataTemplate): I believe this is what initialize which view model the route goes too
+        -->
+        
+        <ShellContent Title="Home" Route="MainPageRoute" ContentTemplate="{DataTemplate local:MainPageView}"/>
+        <ShellContent Title="Create New Workout" Route="TestPageRoute" ContentTemplate="{DataTemplate local:TestPageView}"/>
         
     </FlyoutItem>
 

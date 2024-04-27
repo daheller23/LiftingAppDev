@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿#region "Usings"
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit;
+#endregion
 
 namespace LiftingAppDev.ViewModels
 {
@@ -19,7 +21,6 @@ namespace LiftingAppDev.ViewModels
 
         #region "ICommands"
         public ICommand ButtonClicked { get; set; }
-        public ICommand CreateNewWorkoutCommand { get; set; }
         #endregion
 
         public MainPageViewModel()
@@ -29,10 +30,6 @@ namespace LiftingAppDev.ViewModels
                 OnCounterClicked();
             });
 
-            CreateNewWorkoutCommand = new Command(() =>
-            {
-                NavigateToNewPage();          
-            });
                       
         }
 
@@ -48,25 +45,14 @@ namespace LiftingAppDev.ViewModels
         }
         #endregion
 
-        #region OnCounterClicked
+        #region "OnCounterClicked"
         private void OnCounterClicked()
         {
             Count++;
         }
         #endregion
 
-        private async void NavigateToNewPage()
-        {
-            try
-            {
-                await Shell.Current.GoToAsync("//home/TestPageRoute");
-            } 
-            catch(Exception ex)
-            {
 
-                await Console.Out.WriteLineAsync(ex.ToString());
-            }
-        }
 
 
 
