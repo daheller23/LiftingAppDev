@@ -4,10 +4,10 @@ namespace LiftingAppDev
 {
     public partial class TestPageView : ContentPage
     {
-        public TestPageView(TestPageViewModel testPageViewModel)
+        public TestPageView()
         {
             InitializeComponent();
-            BindingContext = testPageViewModel;
+            this.BindingContext = new TestPageViewModel();
         }
 
     }

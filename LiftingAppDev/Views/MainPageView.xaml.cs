@@ -4,10 +4,10 @@ namespace LiftingAppDev
 {
     public partial class MainPageView : ContentPage
     {
-        public MainPageView(MainPageViewModel mainPageViewModel)
+        public MainPageView()
         {
             InitializeComponent();
-            BindingContext = mainPageViewModel;
+            this.BindingContext = new MainPageViewModel();
         }
     }
 

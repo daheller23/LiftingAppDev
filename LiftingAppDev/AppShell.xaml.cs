@@ -6,8 +6,8 @@
         {
             InitializeComponent();
 
-            Routing.RegisterRoute(nameof(MainPageView), typeof(MainPageView));
-            Routing.RegisterRoute(nameof(TestPageView), typeof(TestPageView));
+            //Routing.RegisterRoute(nameof(MainPageView), typeof(MainPageView));
+            //Routing.RegisterRoute(nameof(TestPageView), typeof(TestPageView));
         }
     }
 }

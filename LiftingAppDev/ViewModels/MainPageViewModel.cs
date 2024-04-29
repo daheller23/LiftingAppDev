@@ -13,25 +13,11 @@ using CommunityToolkit;
 
 namespace LiftingAppDev.ViewModels
 {
-    public partial class MainPageViewModel : ContentPage
+    public partial class MainPageViewModel : BaseViewModel
     {
         #region "Private Variables"
         private int count = 0;
         #endregion
-
-        #region "ICommands"
-        public ICommand ButtonClicked { get; set; }
-        #endregion
-
-        public MainPageViewModel()
-        {
-            ButtonClicked = new Command(() =>
-            {
-                OnCounterClicked();
-            });
-
-                      
-        }
 
         #region "Public Variables"
         public int Count
@@ -45,10 +31,22 @@ namespace LiftingAppDev.ViewModels
         }
         #endregion
 
-        #region "OnCounterClicked"
-        private void OnCounterClicked()
+        #region "ICommands"
+        public ICommand NavigateToCreateNewWorkoutView_Click => new Command(NavigateToCreateNewWorkoutView);
+        #endregion
+
+        public MainPageViewModel()
         {
-            Count++;
+
+
+                      
+        }
+
+
+        #region "NavigateToCreateNewWorkoutView"
+        private async void NavigateToCreateNewWorkoutView()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new TestPageView());
         }
         #endregion
 

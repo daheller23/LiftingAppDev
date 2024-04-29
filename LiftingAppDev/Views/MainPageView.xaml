@@ -5,23 +5,17 @@
              Title="Home"> <!-- Title at top of page -->
 
     <ScrollView>
-        <VerticalStackLayout
+        <StackLayout
             Padding="30,0"
-            Spacing="25">
-
-            <Label
-                Text="Page 1"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            Spacing="25"
+            VerticalOptions="EndAndExpand">
 
             <Button
-                Text="{Binding Count}" 
-                Command="{Binding ButtonClicked}"
-                HorizontalOptions="Fill" />
-
-
-
-        </VerticalStackLayout>
+                Text="Create New Workout" 
+                Command="{Binding NavigateToCreateNewWorkoutView_Click}"
+                HorizontalOptions="FillAndExpand"/>
+            
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>

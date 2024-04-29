@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace LiftingAppDev.ViewModels
 {
-    public partial class TestPageViewModel : ContentPage
+    public partial class TestPageViewModel : BaseViewModel
     {
 
         public TestPageViewModel()
