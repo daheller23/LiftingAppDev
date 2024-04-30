@@ -16,23 +16,17 @@ namespace LiftingAppDev.ViewModels
     public partial class MainPageViewModel : BaseViewModel
     {
         #region "Private Variables"
-        private int count = 0;
+
         #endregion
 
         #region "Public Variables"
-        public int Count
-        {
-            get => count;
-            set
-            {
-                count = value;
-                OnPropertyChanged();
-            }
-        }
+
         #endregion
 
         #region "ICommands"
         public ICommand NavigateToCreateNewWorkoutView_Click => new Command(NavigateToCreateNewWorkoutView);
+        public ICommand ErrorPopupWindowTest_Click => new Command(ErrorPopupWindow);
+        public ICommand InfoPopupWindowTest_Click => new Command(InfoPopupWindow);
         #endregion
 
         public MainPageViewModel()
@@ -50,10 +44,15 @@ namespace LiftingAppDev.ViewModels
         }
         #endregion
 
+        private void ErrorPopupWindow()
+        {
+            ShowErrorPopup("An error has occurred.");
+        }
 
-
-
-
+        private void InfoPopupWindow()
+        {
+            ShowInfoPopup("Some info is now being displayed.");
+        }
 
 
     }
