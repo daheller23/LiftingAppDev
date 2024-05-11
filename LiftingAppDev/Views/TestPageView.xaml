@@ -4,7 +4,8 @@
              x:Class="LiftingAppDev.TestPageView"
              Title="Create New Workout"
              NavigationPage.HasBackButton="True"
-             NavigationPage.HasNavigationBar="True">
+             NavigationPage.HasNavigationBar="True"
+             HideSoftInputOnTapped="True">
 
     <ScrollView>
         <VerticalStackLayout Padding="18">
@@ -18,6 +19,17 @@
                 Placeholder="Name your workout..."
                 FontSize="Medium">
             </Entry>
+
+            <Label
+                Text="Description:"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+
+            <Editor
+                Placeholder="Give your workout a description..."
+                HeightRequest="250"
+                Keyboard="Chat"
+                ></Editor>
 
 
 

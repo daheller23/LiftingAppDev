@@ -11,11 +11,17 @@
             VerticalOptions="EndAndExpand">
 
             <Button
-                Text="Create New Workout" 
+                WidthRequest="50"
+                HeightRequest="50"
+                CornerRadius="60"
+                Text="+" 
+                FontSize="Large"
                 Command="{Binding NavigateToCreateNewWorkoutView_Click}"
-                HorizontalOptions="FillAndExpand"/>
+                HorizontalOptions="EndAndExpand"
+                Margin="-5, 20"         
+                />
 
-            <Button
+            <!--<Button
                 Text="Test Error Popup" 
                 Command="{Binding ErrorPopupWindowTest_Click}"
                 HorizontalOptions="FillAndExpand"/>
@@ -23,7 +29,7 @@
             <Button
                 Text="Test Info Popup" 
                 Command="{Binding InfoPopupWindowTest_Click}"
-                HorizontalOptions="FillAndExpand"/>
+                HorizontalOptions="FillAndExpand"/>-->
 
         </StackLayout>
     </ScrollView>
