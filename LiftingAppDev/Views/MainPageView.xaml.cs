@@ -9,6 +9,7 @@ namespace LiftingAppDev
             InitializeComponent();
             this.BindingContext = new MainPageViewModel();
         }
+
     }
 
 }

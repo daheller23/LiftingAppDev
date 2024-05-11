@@ -36,23 +36,26 @@ namespace LiftingAppDev.ViewModels
                       
         }
 
-
         #region "NavigateToCreateNewWorkoutView"
-        private async void NavigateToCreateNewWorkoutView()
+        private void NavigateToCreateNewWorkoutView()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new TestPageView());
+            NavigateToPage(new TestPageView());
         }
         #endregion
 
+        #region "TestErrorPopupWindow"
         private void ErrorPopupWindow()
         {
             ShowErrorPopup("An error has occurred.");
         }
+        #endregion
 
+        #region "TestInfoPopupWindow"
         private void InfoPopupWindow()
         {
             ShowInfoPopup("Some info is now being displayed.");
         }
+        #endregion
 
 
     }
