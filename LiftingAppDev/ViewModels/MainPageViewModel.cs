@@ -25,8 +25,7 @@ namespace LiftingAppDev.ViewModels
 
         #region "ICommands"
         public ICommand NavigateToCreateNewWorkoutView_Click => new Command(NavigateToCreateNewWorkoutView);
-        public ICommand ErrorPopupWindowTest_Click => new Command(ErrorPopupWindow);
-        public ICommand InfoPopupWindowTest_Click => new Command(InfoPopupWindow);
+
         #endregion
 
         public MainPageViewModel()
@@ -37,25 +36,22 @@ namespace LiftingAppDev.ViewModels
         }
 
         #region "NavigateToCreateNewWorkoutView"
+        // Function: NavigateToCreateNewWorkoutView(void)
+        // Description: Navigates To the CreateNewWorkoutView (currently called TestPageView)
         private void NavigateToCreateNewWorkoutView()
         {
-            NavigateToPage(new TestPageView());
+            try
+            {
+                NavigateToPage(new TestPageView());
+            }
+            catch(Exception ex)
+            {
+                ShowErrorPopup($"NavigateToCreateNewWorkoutView: {ex.Message}");
+            }
+
         }
         #endregion
 
-        #region "TestErrorPopupWindow"
-        private void ErrorPopupWindow()
-        {
-            ShowErrorPopup("An error has occurred.");
-        }
-        #endregion
-
-        #region "TestInfoPopupWindow"
-        private void InfoPopupWindow()
-        {
-            ShowInfoPopup("Some info is now being displayed.");
-        }
-        #endregion
 
 
     }

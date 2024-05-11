@@ -21,16 +21,6 @@
                 Margin="-5, 20"         
                 />
 
-            <!--<Button
-                Text="Test Error Popup" 
-                Command="{Binding ErrorPopupWindowTest_Click}"
-                HorizontalOptions="FillAndExpand"/>
-
-            <Button
-                Text="Test Info Popup" 
-                Command="{Binding InfoPopupWindowTest_Click}"
-                HorizontalOptions="FillAndExpand"/>-->
-
         </StackLayout>
     </ScrollView>
 

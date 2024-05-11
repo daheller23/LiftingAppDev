@@ -16,6 +16,7 @@
                 FontSize="Large"/>
 
             <Entry
+                Text="{Binding WorkoutName}"
                 Placeholder="Name your workout..."
                 FontSize="Medium">
             </Entry>
@@ -29,9 +30,13 @@
                 Placeholder="Give your workout a description..."
                 HeightRequest="250"
                 Keyboard="Chat"
+                Text="{Binding WorkoutDescription}"
                 ></Editor>
 
-
+            <Button
+                Text="Create New Workout"
+                Command="{Binding CreateNewWorkout_Submit_Click}">
+            </Button>
 
         </VerticalStackLayout>
     </ScrollView>

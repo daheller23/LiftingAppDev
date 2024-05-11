@@ -21,31 +21,28 @@ public class BaseViewModel : INotifyPropertyChanged
     #endregion
 
     #region "ShowErrorPopup"
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
     public void ShowErrorPopup(string message)
     {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
         Application.Current.MainPage.DisplayAlert("Error", message, "OK");
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
     #endregion
 
     #region "ShowInfoPopup"
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
     public void ShowInfoPopup(string message)
     {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
         Application.Current.MainPage.DisplayAlert("Info", message, "OK");
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
     #endregion
 
     #region "NavigateToPage"
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
     public async void NavigateToPage(dynamic page)
     {
         try
         {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             await Application.Current.MainPage.Navigation.PushAsync(page);
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
         catch(Exception ex)
         {
@@ -54,4 +51,11 @@ public class BaseViewModel : INotifyPropertyChanged
     }
     #endregion
 
+    #region "NavigateBack"
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+    public async void NavigateBack()
+    {
+        await Application.Current.MainPage.Navigation.PopAsync();
+    }
+    #endregion
 }
