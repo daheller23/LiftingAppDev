@@ -63,7 +63,7 @@ namespace LiftingAppDev.ViewModels
             }
             catch (Exception ex) 
             {
-                ShowErrorPopup($"CreateNewWorkout_Submit: {ex.Message}");
+                ShowErrorPopup($"{ex.Message}");
             }
         }
         #endregion

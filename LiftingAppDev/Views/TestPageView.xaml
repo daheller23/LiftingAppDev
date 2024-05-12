@@ -6,15 +6,15 @@
              NavigationPage.HasBackButton="True"
              NavigationPage.HasNavigationBar="True"
              HideSoftInputOnTapped="True">
+    
+        <StackLayout Padding="18">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="18">
-            
+        <StackLayout>
+
             <Label
-                Text="Name:"
+                Text="Name"
                 FontAttributes="Bold"
-                FontSize="Large"/>
-
+                FontSize="Medium"/>
             <Entry
                 Text="{Binding WorkoutName}"
                 Placeholder="Name your workout..."
@@ -22,23 +22,30 @@
             </Entry>
 
             <Label
-                Text="Description:"
+                Text="Description"
                 FontAttributes="Bold"
-                FontSize="Large"/>
-
+                FontSize="Medium"
+                Margin="0, 30, 0, 0"/>
             <Editor
                 Placeholder="Give your workout a description..."
                 HeightRequest="250"
                 Keyboard="Chat"
-                Text="{Binding WorkoutDescription}"
-                ></Editor>
+                Text="{Binding WorkoutDescription}">
+            </Editor>
 
+        </StackLayout>
+
+        <StackLayout 
+            VerticalOptions="EndAndExpand">
             <Button
                 Text="Create New Workout"
-                Command="{Binding CreateNewWorkout_Submit_Click}">
+                Command="{Binding CreateNewWorkout_Submit_Click}"
+                VerticalOptions="EndAndExpand">
             </Button>
+        </StackLayout>
+            
+    </StackLayout>
 
-        </VerticalStackLayout>
-    </ScrollView>
+
 
 </ContentPage>
